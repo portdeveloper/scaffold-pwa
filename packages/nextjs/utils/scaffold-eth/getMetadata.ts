@@ -18,11 +18,21 @@ export const getMetadata = ({
 
   return {
     metadataBase: new URL(baseUrl),
+    applicationName: title,
     title: {
       default: title,
       template: titleTemplate,
     },
     description: description,
+    manifest: "/manifest.json",
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: "default",
+      title: title,
+    },
+    formatDetection: {
+      telephone: false,
+    },
     openGraph: {
       title: {
         default: title,
@@ -44,6 +54,8 @@ export const getMetadata = ({
       images: [imageUrl],
     },
     icons: {
+      shortcut: "/favicon.ico",
+      apple: [{ url: "/icons/apple-touch-icon.png", sizes: "180x180" }],
       icon: [{ url: "/favicon.png", sizes: "32x32", type: "image/png" }],
     },
   };
