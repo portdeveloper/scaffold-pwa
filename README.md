@@ -14,8 +14,30 @@
 - 🧱 [**Components**](https://docs.scaffoldeth.io/components/): Collection of common web3 components to quickly build your frontend.
 - 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
 - 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
+- 📱 **Progressive Web App (PWA)**: Support for offline functionality and app-like experience using [Serwist](https://serwist.pages.dev/).
+- 🔔 **Web Push Notifications**: Engage users with push notifications even when the app is closed.
 
 ![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+
+## PWA and Push Notifications Setup
+
+This version of Scaffold-ETH 2 includes PWA capabilities using Serwist (a service worker library) and web push notification support.
+
+### Generating VAPID Keys
+
+To use web push notifications, you need to generate VAPID (Voluntary Application Server Identification) keys:
+
+```
+yarn generate-vapid-keys
+```
+
+This will output a JSON object with `publicKey` and `privateKey`. Add these values to your environment variables:
+
+```
+WEB_PUSH_EMAIL=your-email@example.com
+WEB_PUSH_PRIVATE_KEY=your-private-key
+NEXT_PUBLIC_WEB_PUSH_PUBLIC_KEY=your-public-key
+```
 
 ## Requirements
 
