@@ -1,12 +1,10 @@
 import { PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD } from "next/constants.js";
 import type { NextConfig } from "next";
 
-let nextConfig: NextConfig = {};
-
-/** @type {(phase: string, defaultConfig: import("next").NextConfig) => Promise<import("next").NextConfig>} */
-export default async (phase: any) => {
-  /** @type {import("next").NextConfig} */
-  nextConfig = {
+/** @type {(phase: string) => Promise<NextConfig>} */
+const nextJsConfig = async (phase: string): Promise<NextConfig> => {
+  /** @type {NextConfig} */
+  const nextConfig: NextConfig = {
     reactStrictMode: true,
     devIndicators: false,
     typescript: {
@@ -22,10 +20,18 @@ export default async (phase: any) => {
     },
   };
 
+  // Apply IPFS-specific settings if needed
+  if (process.env.NEXT_PUBLIC_IPFS_BUILD === "true") {
+    nextConfig.output = "export";
+    nextConfig.trailingSlash = true;
+    nextConfig.images = {
+      unoptimized: true,
+    };
+  }
+
+  // Apply Serwist service worker wrapper only in dev or production builds
   if (phase === PHASE_DEVELOPMENT_SERVER || phase === PHASE_PRODUCTION_BUILD) {
     const withSerwist = (await import("@serwist/next")).default({
-      // Note: This is only an example. If you use Pages Router,
-      // use something else that works, such as "service-worker/index.ts".
       swSrc: "app/sw.ts",
       swDest: "public/sw.js",
     });
@@ -35,14 +41,4 @@ export default async (phase: any) => {
   return nextConfig;
 };
 
-const isIpfs = process.env.NEXT_PUBLIC_IPFS_BUILD === "true";
-
-if (isIpfs) {
-  nextConfig.output = "export";
-  nextConfig.trailingSlash = true;
-  nextConfig.images = {
-    unoptimized: true,
-  };
-}
-
-module.exports = nextConfig;
+export default nextJsConfig;
