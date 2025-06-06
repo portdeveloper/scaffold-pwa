@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@heroicons/react": "~2.1.5",
+    "@privy-io/react-auth": "latest",
     "@rainbow-me/rainbowkit": "2.2.3",
     "@serwist/next": "^9.0.12",
     "@tanstack/react-query": "~5.59.15",

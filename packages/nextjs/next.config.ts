@@ -15,7 +15,13 @@ const nextJsConfig = async (phase: string): Promise<NextConfig> => {
     },
     webpack: config => {
       config.resolve.fallback = { fs: false, net: false, tls: false };
-      config.externals.push("pino-pretty", "lokijs", "encoding");
+      config.externals.push(
+        "pino-pretty",
+        "lokijs",
+        "encoding",
+        { "@solana/web3.js": "commonjs @solana/web3.js" },
+        { "@solana/spl-token": "commonjs @solana/spl-token" },
+      );
       return config;
     },
   };
