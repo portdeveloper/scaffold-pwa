@@ -3553,6 +3553,7 @@ __metadata:
     next: ~15.2.0
     next-nprogress-bar: ~2.3.13
     next-themes: ~0.3.0
+    porto: ^0.0.29
     postcss: ~8.4.45
     prettier: ~3.3.3
     qrcode.react: ~4.0.1
@@ -3715,6 +3716,13 @@ __metadata:
   version: 0.25.24
   resolution: "@sinclair/typebox@npm:0.25.24"
   checksum: 10219c58f40b8414c50b483b0550445e9710d4fe7b2c4dccb9b66533dd90ba8e024acc776026cebe81e87f06fa24b07fdd7bc30dd277eb9cc386ec50151a3026
+  languageName: node
+  linkType: hard
+
+"@sinclair/typebox@npm:~0.34":
+  version: 0.34.33
+  resolution: "@sinclair/typebox@npm:0.34.33"
+  checksum: 8393956081079c700a563bc6fd977492be019d0492d92dbc15ff98a011d91c612673535bbbb786d1b8b7a39791a724d301e013d8c903992eed8ebf7e7340686d
   languageName: node
   linkType: hard
 
@@ -11522,7 +11530,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mipd@npm:0.0.7":
+"mipd@npm:0.0.7, mipd@npm:^0.0.7":
   version: 0.0.7
   resolution: "mipd@npm:0.0.7"
   peerDependencies:
@@ -12416,6 +12424,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ox@npm:^0.6.12":
+  version: 0.6.12
+  resolution: "ox@npm:0.6.12"
+  dependencies:
+    "@adraffy/ens-normalize": ^1.10.1
+    "@noble/curves": ^1.6.0
+    "@noble/hashes": ^1.5.0
+    "@scure/bip32": ^1.5.0
+    "@scure/bip39": ^1.4.0
+    abitype: ^1.0.6
+    eventemitter3: 5.0.1
+  peerDependencies:
+    typescript: ">=5.4.0"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 6709e7ef5bc9b74d4a2f84443292cd624891d6f556a53363578d785103610d5623c96fe10c355158ebd50a4d09adaad9b26017e6207574d04be33ca61242c2a4
+  languageName: node
+  linkType: hard
+
 "p-cancelable@npm:^4.0.1":
   version: 4.0.1
   resolution: "p-cancelable@npm:4.0.1"
@@ -12845,6 +12873,35 @@ __metadata:
   version: 2.1.11
   resolution: "pony-cause@npm:2.1.11"
   checksum: 4aaa9ddab8f8225b5cbb32f7329a71b73679074579fa91f9e9d6853d398f3c2872de979519e1525c0c91d53afc82c32fddb76e379d19157e69ef1f7064523dfa
+  languageName: node
+  linkType: hard
+
+"porto@npm:^0.0.29":
+  version: 0.0.29
+  resolution: "porto@npm:0.0.29"
+  dependencies:
+    "@sinclair/typebox": ~0.34
+    idb-keyval: ^6.2.1
+    mipd: ^0.0.7
+    ox: ^0.6.12
+    zustand: ^5.0.1
+  peerDependencies:
+    "@tanstack/react-query": ">=5.59.0"
+    "@wagmi/core": ">=2.16.3"
+    react: ">=18"
+    typescript: ">=5.4.0"
+    viem: ">=2.28.0"
+    wagmi: ">=2.0.0"
+  peerDependenciesMeta:
+    "@tanstack/react-query":
+      optional: true
+    react:
+      optional: true
+    typescript:
+      optional: true
+    wagmi:
+      optional: true
+  checksum: 34af122f5ddad037f83aa7e2ce7f1579d008548bebe46e5f7b4fcb15a4dc9e54641d39a7f062f6e603eaa48ab44f521a87bd928fe35ed08e5b4f532933d25067
   languageName: node
   linkType: hard
 
@@ -16357,6 +16414,27 @@ __metadata:
     use-sync-external-store:
       optional: true
   checksum: dc7414de234f9d2c0afad472d6971e9ac32281292faa8ee0910521cad063f84eeeb6f792efab068d6750dab5854fb1a33ac6e9294b796925eb680a59fc1b42f9
+  languageName: node
+  linkType: hard
+
+"zustand@npm:^5.0.1":
+  version: 5.0.5
+  resolution: "zustand@npm:5.0.5"
+  peerDependencies:
+    "@types/react": ">=18.0.0"
+    immer: ">=9.0.6"
+    react: ">=18.0.0"
+    use-sync-external-store: ">=1.2.0"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    immer:
+      optional: true
+    react:
+      optional: true
+    use-sync-external-store:
+      optional: true
+  checksum: 9f4fa5d7152c6b5a9cbcccb08ae34500c7495f8707549e7a8de3cea2844a75a81b4acc69a85601dbe539ee91f69c2d25d4e5286eb973bc76292a2012256061cb
   languageName: node
   linkType: hard
 
