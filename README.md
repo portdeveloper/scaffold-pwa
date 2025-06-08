@@ -1,4 +1,4 @@
-# 🏗 Scaffold-ETH 2 + Serwist
+# 🏗 Scaffold-ETH 2 + Serwist + Privy
 
 <h4 align="center">
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
@@ -37,6 +37,16 @@ This will output a JSON object with `publicKey` and `privateKey`. Add these valu
 WEB_PUSH_EMAIL=your-email@example.com
 WEB_PUSH_PRIVATE_KEY=your-private-key
 NEXT_PUBLIC_WEB_PUSH_PUBLIC_KEY=your-public-key
+```
+
+## Privy Setup
+
+This repository has built in Privy support. Get your app id and client id from [privy.io](https://www.privy.io/)
+Add those values to your .env.local file:
+
+```
+NEXT_PUBLIC_PRIVY_APP_ID=
+NEXT_PUBLIC_PRIVY_CLIENT_ID=
 ```
 
 ## Requirements
