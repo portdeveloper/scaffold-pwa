@@ -35,7 +35,6 @@ const Home: NextPage = () => {
       <div className="px-5 w-full max-w-4xl">
         <h1 className="text-center space-y-4 mb-8">
           <span className="block text-4xl font-bold">Scaffold-ETH 2 + Serwist</span>
-          <span className="block text-2xl mt-2">Supercharge Your Web3 Development</span>
           <InstallPWA />
         </h1>
 
