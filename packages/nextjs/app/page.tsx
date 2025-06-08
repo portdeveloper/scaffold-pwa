@@ -35,8 +35,7 @@ const Home: NextPage = () => {
     <div className="flex items-center flex-col flex-grow pt-10">
       <div className="px-5 w-full max-w-4xl">
         <h1 className="text-center space-y-4 mb-8">
-          <span className="block text-4xl font-bold">Scaffold-ETH 2 + Serwist</span>
-          <span className="block text-2xl mt-2">Supercharge Your Web3 Development</span>
+          <span className="block text-4xl font-bold">Scaffold-ETH 2 + Serwist + Privy</span>
           <InstallPWA />
         </h1>
 
@@ -83,6 +82,7 @@ const Home: NextPage = () => {
           <span className="text-lg font-semibold">Learn more:</span>
           <ProjectLink href="https://serwist.pages.dev/" title="Serwist" />
           <ProjectLink href="https://scaffoldeth.io" title="Scaffold-ETH 2" />
+          <ProjectLink href="https://privy.io" title="Privy" />
         </div>
       </div>
     </div>
