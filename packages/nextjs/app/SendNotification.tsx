@@ -108,7 +108,7 @@ export default function SendNotification() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-2 bg-base-100 p-4 m-8 rounded-lg">
+    <div className="flex flex-col items-center gap-2 bg-base-100 p-4 m-8 rounded-lg  min-w-96">
       <h2 className="text-lg font-bold">Web Push Notifications</h2>
       <div className="flex flex-col md:flex-row gap-4">
         <button

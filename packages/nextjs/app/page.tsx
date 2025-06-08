@@ -4,7 +4,7 @@ import SendNotification from "./SendNotification";
 import type { NextPage } from "next";
 import { BellAlertIcon, BoltIcon, CubeIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
 import { InstallPWA } from "~~/components/InstallPWA";
-import LoginWithEmail from "~~/components/LoginWithEmail";
+import UseLoginPrivy from "~~/components/UseLoginPrivy";
 
 type FeatureCardProps = {
   icon: React.ReactNode;
@@ -40,7 +40,9 @@ const Home: NextPage = () => {
           <InstallPWA />
         </h1>
 
-        <LoginWithEmail />
+        <div className="flex flex-col items-center gap-4 mb-8 ">
+          <UseLoginPrivy />
+        </div>
 
         <div className="flex flex-col items-center gap-4 mb-8">
           <SendNotification />
