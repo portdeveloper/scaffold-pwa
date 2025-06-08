@@ -4,6 +4,7 @@ import SendNotification from "./SendNotification";
 import type { NextPage } from "next";
 import { BellAlertIcon, BoltIcon, CubeIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
 import { InstallPWA } from "~~/components/InstallPWA";
+import LoginWithEmail from "~~/components/LoginWithEmail";
 
 type FeatureCardProps = {
   icon: React.ReactNode;
@@ -38,6 +39,8 @@ const Home: NextPage = () => {
           <span className="block text-2xl mt-2">Supercharge Your Web3 Development</span>
           <InstallPWA />
         </h1>
+
+        <LoginWithEmail />
 
         <div className="flex flex-col items-center gap-4 mb-8">
           <SendNotification />
